@@ -1,0 +1,1 @@
+let idx=0;const slides=[];window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.slide').forEach(s=>slides.push(s));const tick=()=>{slides.forEach(s=>s.classList.remove('active'));idx=(idx+1)%slides.length;slides[idx].classList.add('active')};setInterval(tick,4500)});

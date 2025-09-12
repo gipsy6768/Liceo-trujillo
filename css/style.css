@@ -1,0 +1,273 @@
+:root {
+  --celeste: #6EC1E4;
+  --celeste-2: #4fb5df;
+  --azul-osc: #0b3050;
+  --blanco: #ffffff;
+  --gris: #f5f7fb;
+  --texto: #203042;
+  --shadow: 0 10px 30px rgba(11,48,80,.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--gris);
+}
+
+/* --- Navbar --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, var(--celeste), var(--celeste-2));
+  color: var(--blanco);
+  box-shadow: var(--shadow);
+}
+
+.navbar .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 800;
+}
+
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--celeste-2);
+  font-weight: 900;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 6px 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--blanco);
+  transition: width .25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* --- Hero --- */
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 520px;
+  overflow: hidden;
+  background: var(--celeste);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity .8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,48,80,.35), rgba(11,48,80,.35));
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--blanco);
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  font-size: 1.1rem;
+}
+
+.hero .cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Botones --- */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--blanco);
+  color: var(--azul-osc);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border-color: var(--blanco);
+  color: var(--blanco);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--blanco);
+  color: var(--azul-osc);
+}
+
+/* --- Secciones --- */
+.section {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin: 0 0 6px;
+  color: var(--azul-osc);
+}
+
+.section-sub {
+  color: #586779;
+  margin-bottom: 24px;
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--blanco);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* --- Timeline --- */
+.timeline {
+  position: relative;
+  margin-top: 8px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--celeste-2);
+}
+
+.milestone {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--celeste);
+}
+
+/* --- Footer --- */
+.footer {
+  background: linear-gradient(90deg, var(--celeste), var(--celeste-2));
+  color: var(--blanco);
+}
+
+.footer a {
+  color: #06324d;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,7 @@
+.tabs{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}.tab{padding:10px 16px;border-radius:999px;border:2px solid var(--celeste-2);cursor:pointer;font-weight:700;background:var(--blanco);color:var(--azul-osc);transition:.2s}.tab.active{background:var(--celeste-2);color:var(--blanco)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card3d{perspective:1000px}.inner{position:relative;height:220px;border-radius:16px;box-shadow:var(--shadow);transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.face{position:absolute;inset:0;border-radius:16px;backface-visibility:hidden;overflow:hidden;display:flex;align-items:end;justify-content:flex-start}
+.face img{position:absolute;width:100%;height:100%;object-fit:cover}.face .label{position:relative;background:rgba(255,255,255,.9);padding:8px 12px;margin:12px;border-radius:10px;font-weight:800;color:var(--azul-osc)}
+.back{transform:rotateY(180deg);background:var(--blanco);display:flex;align-items:center;justify-content:center;color:var(--azul-osc);padding:16px}
+.inner.enter{animation:flipIn .8s ease both}@keyframes flipIn{from{transform:rotateY(-180deg)}to{transform:rotateY(0)}}
+@media (max-width: 900px){.grid{grid-template-columns:1fr 1fr}}@media (max-width: 600px){.grid{grid-template-columns:1fr}}

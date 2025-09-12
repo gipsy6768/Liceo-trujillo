@@ -1,0 +1,3 @@
+.staff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.staff{background:var(--blanco);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.staff img{width:100%;height:220px;object-fit:cover}.staff .info{padding:12px}.staff .role{color:#52708a;font-size:.9rem}
+@media (max-width: 900px){.staff-grid{grid-template-columns:1fr 1fr}}@media (max-width: 600px){.staff-grid{grid-template-columns:1fr}}
